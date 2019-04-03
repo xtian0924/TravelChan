@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" data-aos="fade-right" data-aos-duration="1000"><h1>T<span>rav</span>el</h1></a>
+        </div>
+    </header>
+    <section class="special1">
+        <div class="container">
+            <h1>Changdeokgung Palace</h1>
+            <div class="special1-content">
+                <div class="left">
+                    <img src='/img/tour2.jpg' alt="">
+                </div>
+                <aside>
+                    <img src="/img/tour2-1.jpg" alt="">
+                    <img src="/img/tour2-2.jpg" alt="">
+                    <img src="/img/tour2-3.jpg" alt="">
+                    <img src="/img/tour2-4.jpg" alt="">
+                </aside>
+                <div class="down">
+                    <p>Changdeokgung Palace was the second royal villa built following the construction of Gyeongbukgung Palace in 1405. It was the principal palace for many kings of the Joseon Dynasty, and is the most well-preserved of the five remaining royal Joseon palaces. The palace grounds are comprised of a public palace area, a royal family residence building, and the rear garden. Known as a place of rest for the kings, the rear garden boasts a gigantic tree that is over 300 years old, a small pond and a pavilion. </p>
+                    <p>The palace gained importance starting from the time of Seongjong, the 9th king of Joseon, when a number of kings began using it as a place of residence. Unfortunately, the palace was burned down by angry citizens in 1592 when the royal family fled their abode during the Japanese invasion of Korea. Thanks to Gwanghaegun, the palace was restored in 1611. Even today, it houses a number of cultural treasures, such as Injeongjeon Hall, Daejojeon Hall, Seonjeongjeon Hall, and Nakseonjae. </p>
+                    <p>Changdeokgung Palace’s rear garden was constructed during the reign of King Taejong and served as a resting place for the royal family members. The garden had formerly been called Bukwon and Geumwon, but was renamed Biwon after King Kojong came into power. The garden was kept as natural as possible and was touched by human hands only when absolutely necessary. Buyongjeong, Buyongji, Juhabru, Eosumun, Yeonghwadang, Bullomun, Aeryeonjeong, and Yeongyeongdang are some of the many pavilions and fountains that occupy the garden. The most beautiful time to see the garden is during the fall when the autumn foliage is at its peak and the leaves have just started to fall. </p>               
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="others">
+        <div class="container">
+            <div class="others-content">
+                <div>
+                  <a href="special1.html"><span class="view">View</span><img src="img/tour1.jpg" alt=""></a>
+                  <h1>Asan Gingko Tree Road</h1>                  
+                </div>
+                <div>
+                  <a href="special3.html"><span class="view">View</span><img src="img/tour3.jpg" alt=""></a>
+                  <h1>Nami Island</h1>                  
+                </div>
+                <div>
+                  <a href="special4.html"><span class="view">View</span><img src="img/tour4.jpg" alt=""></a>
+                  <h1>Seoraksan National Park</h1>                  
+                </div>
+                <div>
+                  <a href="special5.html"><span class="view">View</span><img src="img/tour5.jpg" alt=""></a>
+                  <h1>Deoksugung Stone Wall Road</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="contact">
+                        <h1>contact</h1>
+                        <a href="">travel1234@gmail.com</a>
+                        <a href="">046-423-6838</a>
+                    </div>
+                    <div class="latest-news">
+                        <h1>latest news</h1>
+                        <div>
+                            <a href="special1.html"><img src="/img/tour1.jpg" alt=""></a>
+                            <a href="special2.html"><img src="/img/tour2.jpg" alt=""></a>
+                            <a href="special3.html"><img src="/img/tour3.jpg" alt=""></a>
+                            <a href="special4.html"><img src="/img/tour4.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1>address</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum tenetur dolorem accusamus quod. Eos, ab.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+        <script>
+            // Var
+            AOS.init();
+            var scroll = new SmoothScroll('a[href*="#"]');
+            var prevScrollpos = window.pageYOffset;
+            // Function
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-50px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        </script>
+</body>
+</html>

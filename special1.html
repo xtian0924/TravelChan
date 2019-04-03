@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" data-aos="fade-right" data-aos-duration="1000"><h1>T<span>rav</span>el</h1></a>
+        </div>
+    </header>
+    <section class="special1">
+        <div class="container">
+            <h1>Asan Gingko Tree Road</h1>
+            <div class="special1-content">
+                <div class="left">
+                    <img src='/img/tour1.jpg' alt="">
+                </div>
+                <aside>
+                    <img src="/img/tour1-1.jpg" alt="">
+                    <img src="/img/tour1-2.jpg" alt="">
+                    <img src="/img/tour1-3.jpg" alt="">
+                    <img src="/img/tour1-4.jpg" alt="">
+                </aside>
+                <div class="down">
+                    <p>Those who travel to Korea during autumn are often in search of stunning landscapes, and this is the epitome of all fall scenery. The Asan Gingko Tree Road is a long avenue lined with towering trees, the leaves of which turn a gorgeous golden yellow in the fall.</p>
+                    <p> This, indeed, is the yellow brick road brought to life. The beauty about fall is how picturesque the leaves look on the trees, and also on the ground. Lining the banks of a river, the trees form a canopy tunnel of sorts above an extensive yellow carpet. Do note that this avenue is a hotspot for photographers; we recommend visiting early, or spending a night in Asan, to ensure that your visit is free from the hordes of crowds. Feel free to skip or ruffle through the leaves – come the next morning, there’ll be a fresh layer coating the ground.</p>
+                    <p>Asan Gokgyo River Ginkgo Tree Road is a road lined with ginkgo trees which is next to a river, it takes about 2.5 hours from Seoul by car. The Ginkgo trees change their color to bright golden yellow from early November. Some people say the Ginkgo leaves and seeds smell like dog poop but whatever it smells like, there are many Korean people visit this place because its beauty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="others">
+        <div class="container">
+            <div class="others-content">
+                <div>
+                  <a href="special2.html"><span class="view">View</span><img src="img/tour2.jpg" alt=""></a>
+                  <h1>Changdeokgung Palace</h1>                  
+                </div>
+                <div>
+                  <a href="special3.html"><span class="view">View</span><img src="img/tour3.jpg" alt=""></a>
+                  <h1>Nami Island</h1>                  
+                </div>
+                <div>
+                  <a href="special4.html"><span class="view">View</span><img src="img/tour4.jpg" alt=""></a>
+                  <h1>Seoraksan National Park</h1>                  
+                </div>
+                <div>
+                  <a href="special5.html"><span class="view">View</span><img src="img/tour5.jpg" alt=""></a>
+                  <h1>Deoksugung Stone Wall Road</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="contact">
+                        <h1>contact</h1>
+                        <a href="">travel1234@gmail.com</a>
+                        <a href="">046-423-6838</a>
+                    </div>
+                    <div class="latest-news">
+                        <h1>latest news</h1>
+                        <div>
+                            <a href="special1.html"><img src="/img/tour1.jpg" alt=""></a>
+                            <a href="special2.html"><img src="/img/tour2.jpg" alt=""></a>
+                            <a href="special3.html"><img src="/img/tour3.jpg" alt=""></a>
+                            <a href="special4.html"><img src="/img/tour4.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1>address</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum tenetur dolorem accusamus quod. Eos, ab.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   
+    <script>
+        // Var
+        AOS.init();
+        var scroll = new SmoothScroll('a[href*="#"]');
+        var prevScrollpos = window.pageYOffset;
+        // Function
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>

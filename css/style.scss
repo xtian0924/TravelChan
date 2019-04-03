@@ -1,0 +1,731 @@
+$sky: #7EBBFA;
+$border: #CCE7FC;
+$bg: #D5E3F0;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin desktop {
+    @media (min-width:768px){
+        @content;
+    }
+}
+
+.container{
+    width: 80%;
+    margin: auto;  
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Poppins', Arial;  
+    background: $border;
+}
+
+header#header{
+    box-sizing: content-box;
+    height: 7vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 97%;
+    border-bottom: $border 5px double;
+    z-index: 5;
+    top: 0;
+    margin-top:5px;
+    border-radius: 20px;
+    margin-left: 1.5%;
+    transition: top 0.5s ease;
+
+    @include desktop{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .logo{
+        padding: 13px 0 10px 0;  
+
+        @include desktop{
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: rgb(50, 146, 243);
+            display: inline-block;
+            h1{
+                transition: all 1s ease;
+
+                span{
+                    color:$sky;
+                }
+
+                &:hover{
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    }
+
+    nav{
+        
+        ul.ul1{
+            list-style-type: none;
+            margin: 0;
+            padding: 0; 
+            display: none;
+            
+
+            @include desktop{
+                display: flex;
+                color: #000;
+            }
+
+            li{
+                display: inline-block;
+                a{
+                    @include desktop{
+                        margin-top: 20px;
+                        display: inline-block;
+                        text-decoration: none;
+                        color: $sky;
+                        text-transform: uppercase;
+                        padding: 0 10px;
+
+                        &:hover{
+                            border-bottom: 1px solid $border;
+                        }
+                    }
+                }
+            }
+        }
+
+        #openmenu{
+            width: 90%;
+            position: fixed;
+            z-index: 2;
+            background: transparent;
+            top: -30px;
+            right: 50%;
+            transform: translateX(50%);
+            flex-direction: column;
+            text-align: center;
+            
+            @include desktop{
+                display: none;
+            }
+
+            ul.ul2{
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+                margin: 0;
+                padding: 0; 
+                li{
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    border: 2px solid $border;
+                    border-bottom: $sky 5px double;
+                    width: 30%;
+                    height: 50px;
+                    background: #fff;  
+                    position: relative;
+                    transition: all 1s ease;
+                    
+
+                    &:hover{
+                        border: 2px solid $border;
+                        background: $sky;
+                        top: 30px;
+                        transition: all 0.5s ease-out;
+                    }
+
+                    &:hover a{
+                        color: #FFF;
+                    }
+
+                    a{
+                        display: inline-block;
+                        color: $sky;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 15px 5px;
+                        font-size: 10px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main#main{
+    background: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    border: 5px solid $border;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    .main-content{
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        @include desktop{
+            height: 100vh;
+        }
+
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            font-size: 30px;
+            font-weight: bold;
+
+            @include desktop{
+                font-size: 50px;
+            }
+        }
+
+        p{
+            text-transform: capitalize;
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            color: #fff;
+            font-weight: 300;
+
+            @include desktop{
+                font-size: 30px;
+            }
+        }
+
+
+        a.btn1{
+            background: $sky;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            border: 5px double #fff;
+            padding: 10px 10px;
+            border-radius: 5px;
+            margin: 20px 5px;
+            display: block;
+            width: 120px;
+            text-align: center;
+            transition: all 0.5s ease;
+
+            @include desktop{
+                width: 200px;
+
+                &:hover{
+                    color: $sky;
+                    border: 5px double $border;
+                    width: 200px !important;
+                    background: #fff;
+                }
+            }
+
+            &:hover{
+                width: 150px;            
+            }
+        }
+    }
+}
+
+section#destination{
+    background: #fff;
+
+    .destination-content{
+        display: grid;
+        grid-template-columns: 1fr; 
+        width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        color: $sky;
+        grid-gap:5px; 
+
+        @include desktop{
+            grid-template-columns: 17% 31% 31% 20%; 
+        }
+    
+
+        div{
+           
+            &:first-child{
+
+                @include desktop{
+                    border-right: 1px solid $border;
+                    padding-right: 10px;
+                    max-width: 134px;
+                }
+            
+            }
+            &:first-child h1{
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 15px;
+
+                @include desktop{
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+                span{
+                    color: #000;
+                    display: block;
+                    margin-top: -8px;
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(3){
+                width: 100%;
+
+                @include desktop{
+                    padding-left: 10px;
+                    width: 70%;
+                    display: grid;
+                    grid-template-columns: auto 100%;
+                    grid-gap: 5px;
+                }
+
+                ::placeholder {
+                    padding-left: 5px;
+                    font-size: 10px;
+                    color: $sky;
+                    opacity: 1;
+                  }
+            }
+
+            p{
+                font-size: 20px;
+
+            }
+
+            &:nth-child(2) input,
+            &:nth-child(3) input{
+                width: 60%;
+                display: block;
+                border-radius: 10px;
+                padding: 5px;
+                border: 2px solid $sky;
+
+                outline: none;
+                background:transparent;
+                margin: 0 auto;
+                transition: all 0.5s ease-in-out;
+
+                &:focus{
+                    width: 80%;
+                    border-bottom: 5px solid $border;
+                }
+
+                @include desktop{
+                    display: inline-block;
+                    width: 100%;
+                    border: 1px solid $sky;
+                    border-radius: 5px;
+                    
+
+                    &:focus{
+                        width: 100%;
+                    }
+                    
+                }
+            }
+
+            &:last-child input{
+                border-radius: 5px;
+                padding: 5px;
+                margin: 10px;
+                border:none;
+                width: 100px;
+                background: #fff;
+                color: $sky;
+                border: 1px solid $sky;
+
+                @include desktop{
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 100px; 
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    width: 120px;
+                    border: 1px solid $border;
+                    background: $sky;
+                    color: #fff;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+section#specials{
+    background: #fff;
+    border-top: 5px double $border;
+    color: $sky;
+
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 5%;
+    }
+
+    p{
+        text-align: center;
+        text-transform: capitalize;
+        color: $border;
+        color: #000000;
+    }
+
+    .specials-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        margin: 30px 0 50px 0;
+        height: auto;
+
+        @include desktop{
+            grid-template-columns: 19% 19% 19% 19% 19%;
+        }
+        div{
+            position: relative;
+            a{
+                &:hover{
+                    opacity: 0.5;
+                } 
+                &:hover span.view{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    border: 5px double $border;              
+                }   
+            }
+
+            h1{
+                font-size: 15px;
+            }
+
+            span.view{
+                position: absolute;
+                color:#fff;
+                font-size: 30px;
+                text-transform: uppercase;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -100%);
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;    
+            }
+        }
+    }
+}
+
+section#holydays{
+    border-top: 5px double $border;
+    border-bottom: 5px double $border ;
+    background: #fff;
+    color: $sky;
+
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 5%;
+    }
+
+    .holydays-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 30px 0 0 0;
+        padding-bottom: 5%;
+
+        @include desktop{
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+            padding-bottom: 5%;
+        }
+
+        div{
+            padding-bottom: 20px;
+            i{
+                -webkit-text-stroke: 1px $sky;
+                color: $border;
+                margin-bottom: 5px;
+
+                &:hover{
+                    color: $sky;
+                    -webkit-text-stroke: 1px $border;
+                }
+            
+                h2{
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background:#fff;
+    color: $sky;
+    position: relative;
+    bottom: 0;
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 5% 0 3% 0;
+        }
+
+        > div{
+            @include desktop{
+                width: 30%;
+            }
+        }
+       .contact{
+            h1{
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                font-size: 25px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+            }
+        }
+        .latest-news{
+
+            @include desktop{
+                border-right: $sky solid 1px;
+                border-left: $sky solid 1px;
+            }
+            h1{
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                font-size: 25px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            div{
+                a{
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid $sky;
+
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+        .address{
+            h1{
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                font-size: 25px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            p{
+                font-size: 13px;
+                margin-bottom: 5px;
+                color: #000;
+            }
+        }
+    }
+}
+
+section.special1{
+    padding-top: 100px;
+    background: #fff;
+    border: 5px solid $border;
+    border-bottom: 5px double $border !important;
+
+    h1{
+        text-align: center;
+        font-size: 30px;
+        color: $sky;
+        margin-bottom: 10px;
+
+        @include desktop{
+            font-size: 50px; 
+        }
+    }
+
+    .special1-content{
+
+        @include desktop{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            grid-template-areas:
+            "left aside"
+            "down down";
+        }
+        .left{
+
+            @include desktop{
+                grid-area: left;
+            }
+           
+            img{
+                border: 5px double $border;
+                width: 100%;
+
+                @include desktop{
+                    width: 40vw;
+                }
+               
+            }
+        }
+        aside{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5px;
+
+            @include desktop{
+                width: 98%;
+                height: 100%;
+            }
+
+            img{
+                width: 100%;
+                height: 100px;
+                border: 3px double $border;
+
+                @include desktop{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .down{
+            text-align: justify;
+            margin-top: 20px;
+            margin-bottom: 30px;
+
+            @include desktop{
+                grid-area: down;
+                text-align: justify;
+                margin-top: 0;
+            }
+           
+            p{
+                color: #566777;
+                font-size: 15px;
+                margin-top: 10px;
+            }
+        }
+        
+    }
+}
+
+section.others{
+    padding:20px 0;
+    background: #fff;
+    border-right: 5px solid $border;
+    border-left: 5px solid $border;
+
+    @include desktop{
+        padding: 20px 0;
+    }
+
+    .others-content{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-gap: 5px;
+
+        @include desktop{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div{
+            position: relative;
+            a{
+                &:hover span.view{
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &:hover{
+                    opacity: 0.5;
+                }   
+                span.view{
+                    position: absolute;
+                    color:#fff;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    z-index: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -100%);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.3s ease;    
+                
+                }
+                img{
+                    width: 100%;
+                    height:100px;
+                    border: 3px double $border;
+
+                    @include desktop{
+                        width: 97%;
+                        height: auto;
+
+                    }
+                }
+            }
+
+            h1{
+                font-size: 16px;
+                text-align: center;
+                margin-left: -3px;
+                margin-top: 5px;
+                color: $sky;
+            }
+        }
+    }
+    
+}
